@@ -1,4 +1,7 @@
 import React from 'react';
+import { AnimatePresence } from 'framer-motion';
+import { useAppLoader } from './hooks/useAppLoader';
+import { LoadingScreen } from './components/ui/LoadingScreen';
 import { Navigation, BackToTop } from './components/layout/Navigation';
 import { Hero } from './components/sections/Hero';
 import { Overview } from './components/sections/Overview';
@@ -18,8 +21,11 @@ import { Profiles } from './components/sections/Profiles';
 import { Contact } from './components/sections/Contact';
 import { Footer } from './components/layout/Footer';
 export function App() {
+  const { isLoading, progress } = useAppLoader();
+
   return (
     <div className="font-sans text-charcoal bg-cream min-h-screen">
+      <AnimatePresence>{isLoading && <LoadingScreen progress={progress} />}</AnimatePresence>
       <Navigation />
 
       <main>

@@ -169,7 +169,9 @@ export const ColorToAR = () => {
                 <img
                   src={panel.img}
                   alt={panel.label}
-                  className="w-full h-full object-contain" />
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                  decoding="async" />
                 
               </div>
               <p className="mt-4 text-sm font-semibold text-charcoal/80 text-center">{panel.label}</p>

@@ -116,7 +116,8 @@ export const Gallery = () => {
                       src={item.img}
                       alt={item.caption}
                       className="w-full h-full object-contain group-hover:scale-[1.02] transition-transform duration-300"
-                      loading="lazy" />
+                      loading="lazy"
+                      decoding="async" />
                   </div>
                   <p className="mt-2.5 text-[10px] sm:text-xs font-semibold text-charcoal text-center leading-snug px-0.5 min-h-[2.5rem] line-clamp-2">
                     {item.caption}
@@ -196,7 +197,8 @@ export const Gallery = () => {
               <img
                 src={galleryItems[lightboxIndex].img}
                 alt={galleryItems[lightboxIndex].caption}
-                className="w-full h-full object-contain" />
+                className="w-full h-full object-contain"
+                decoding="async" />
             </div>
             <div className="px-4 py-4 border-t border-cream text-center">
               <p className="text-sm font-bold text-charcoal">

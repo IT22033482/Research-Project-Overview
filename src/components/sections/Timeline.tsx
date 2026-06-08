@@ -95,6 +95,8 @@ export const Timeline = () => {
                   <img
                     src={era.image}
                     alt={era.name}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center group-hover:scale-[1.04] transition-transform duration-500" />
                 </div>
 

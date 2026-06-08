@@ -91,7 +91,10 @@ export const Hero = () => {
               <img
                 src={appUiImages.startJourney}
                 alt="App welcome screen with Start Your Journey"
-                className="absolute inset-0 w-full h-full object-contain" />
+                className="absolute inset-0 w-full h-full object-contain"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async" />
             </PhoneMockup>
           </motion.div>
         </div>

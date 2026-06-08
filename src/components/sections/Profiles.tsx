@@ -50,6 +50,8 @@ export const Profiles = () => {
                   <div className={`w-24 h-24 rounded-full overflow-hidden shrink-0 shadow-sm border-2 ${person.border} ring-2 ring-white bg-cream`}>
                     <img
                       src={person.image}
+                      loading="lazy"
+                      decoding="async"
                       alt={person.name}
                       className="w-full h-full object-cover object-[center_20%]" />
                   </div>
@@ -80,6 +82,8 @@ export const Profiles = () => {
               <div className="w-36 h-36 rounded-full overflow-hidden shrink-0 shadow-md border-4 border-white ring-2 ring-peach-light/50">
                 <img
                   src={profileImages.researcher}
+                  loading="lazy"
+                  decoding="async"
                   alt="Pradeepa W D R"
                   className="w-full h-full object-cover object-top" />
               </div>
