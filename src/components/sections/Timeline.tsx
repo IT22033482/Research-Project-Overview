@@ -8,6 +8,7 @@ import {
   Palette,
   CheckSquare
 } from 'lucide-react';
+import { publicAsset } from '../../utils/publicAsset';
 
 const learningActivities = [
   {
@@ -37,9 +38,9 @@ const learningActivities = [
   }
 ] as const;
 const eraImages = {
-  paleozoic: '/era-icons/paleozoic.png',
-  mesozoic: '/era-icons/mesozoic.png',
-  cenozoic: '/era-icons/cenozoic.png'
+  paleozoic: publicAsset('/app-ui/paleozoic.png'),
+  mesozoic: publicAsset('/app-ui/mesozoic.png'),
+  cenozoic: publicAsset('/app-ui/cenozoic.png')
 } as const;
 
 const eras = [
