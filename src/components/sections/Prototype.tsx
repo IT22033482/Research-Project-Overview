@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { SectionHeader, Button, PhoneMockup } from '../ui/Shared';
 import {
   PlayCircle,
-  Image as ImageIcon,
   FileCode2,
   ChevronLeft,
   ChevronRight } from
@@ -111,15 +110,8 @@ export const Prototype = () => {
                 <PlayCircle className="w-5 h-5 mr-2" /> Watch Demo Video
               </Button>
               <Button
-                variant="secondary"
-                className="w-full bg-white border border-peach-light">
-                
-                <ImageIcon className="w-5 h-5 mr-2" /> View Screenshots
-              </Button>
-              <Button
                 variant="outline"
                 className="w-full border-sky-mid text-sky-mid hover:bg-sky-light">
-                
                 <FileCode2 className="w-5 h-5 mr-2" /> View Tech Summary
               </Button>
             </div>

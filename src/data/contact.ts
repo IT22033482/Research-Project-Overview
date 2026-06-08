@@ -5,6 +5,8 @@ export const BEHANCE_PROFILE_URL = 'https://www.behance.net/ruwanipradeepa';
 export const LINKEDIN_PROFILE_URL =
   'https://www.linkedin.com/in/ruwani-pradeepa-652994258/';
 
+export const SLIIT_WEBSITE_URL = 'https://www.sliit.lk/';
+
 export const mailtoResearcher = `mailto:${RESEARCHER_EMAIL}?subject=${encodeURIComponent(
   'AR Geological History — Research Inquiry'
 )}`;

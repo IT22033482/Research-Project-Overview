@@ -5,7 +5,8 @@ import { Mail, Building, Linkedin, Github, MessageSquare } from 'lucide-react';
 import {
   mailtoResearcher,
   RESEARCHER_EMAIL,
-  LINKEDIN_PROFILE_URL
+  LINKEDIN_PROFILE_URL,
+  SLIIT_WEBSITE_URL
 } from '../../data/contact';
 
 export const Contact = () => {
@@ -38,6 +39,8 @@ export const Contact = () => {
               icon: Building,
               label: 'Institution',
               value: 'SLIIT / Department',
+              href: SLIIT_WEBSITE_URL,
+              external: true,
               color: 'text-mint-mid',
               bg: 'bg-mint-light'
             },
