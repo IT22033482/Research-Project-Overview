@@ -14,6 +14,7 @@ export const downloadResources = [
     desc: 'Summary of the research component.',
     url: researchDocuments.abstract,
     download: 'IT22033482_Research_Abstract.pdf',
+    actionLabel: 'Download',
     icon: FileText,
     color: 'text-peach-deep',
     bg: 'bg-peach-light'
@@ -23,6 +24,7 @@ export const downloadResources = [
     desc: 'Complete academic documentation.',
     url: researchDocuments.thesis,
     download: 'IT22033482_Research_Thesis.pdf',
+    actionLabel: 'Download',
     icon: File,
     color: 'text-mint-mid',
     bg: 'bg-mint-light'
@@ -32,6 +34,7 @@ export const downloadResources = [
     desc: 'Final evaluation slide deck.',
     url: researchDocuments.presentation,
     download: 'Final PPT.pptx',
+    actionLabel: 'Download',
     icon: Presentation,
     color: 'text-lavender-mid',
     bg: 'bg-lavender-light'
@@ -41,6 +44,7 @@ export const downloadResources = [
     desc: 'System architecture and setup.',
     url: researchDocuments.technicalDocumentation,
     download: 'Technical Documentation.pdf',
+    actionLabel: 'Download',
     icon: Code,
     color: 'text-butter-mid',
     bg: 'bg-butter-light'
@@ -49,6 +53,7 @@ export const downloadResources = [
     title: 'Demo Video',
     desc: 'Full walkthrough of the prototype.',
     url: researchDocuments.demoVideo,
+    actionLabel: 'Open',
     icon: PlaySquare,
     color: 'text-peach-deep',
     bg: 'bg-peach-light',
@@ -58,6 +63,7 @@ export const downloadResources = [
     title: 'GitHub Repository',
     desc: 'Source code and assets.',
     url: GITHUB_REPO_URL,
+    actionLabel: 'Open',
     icon: Github,
     color: 'text-charcoal',
     bg: 'bg-gray-200',

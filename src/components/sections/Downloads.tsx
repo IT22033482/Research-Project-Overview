@@ -39,7 +39,7 @@ export const Downloads = () => {
                 variant="secondary"
                 className="w-full text-sm py-2.5 bg-cream text-charcoal hover:bg-peach-mid hover:text-white border-none">
                 
-                  Download / Open
+                  {res.actionLabel}
                 </Button>
               </div>
             </Card>
