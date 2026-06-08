@@ -2,6 +2,7 @@ import React from 'react';
 import { SectionHeader, Card, Button } from '../ui/Shared';
 import { Briefcase, Mail, FileText } from 'lucide-react';
 import { publicAsset } from '../../utils/publicAsset';
+import { mailtoResearcher } from '../../data/contact';
 
 const profileImages = {
   researcher: publicAsset('/profiles/pradeepa-wdr.jpg'),
@@ -112,7 +113,7 @@ export const Profiles = () => {
                   <Button variant="primary" className="text-sm py-2.5 px-5">
                     <Briefcase size={18} className="mr-2" /> View Portfolio
                   </Button>
-                  <Button variant="secondary" className="text-sm py-2.5 px-5 bg-white border border-peach-light">
+                  <Button href={mailtoResearcher} variant="secondary" className="text-sm py-2.5 px-5 bg-white border border-peach-light">
                     <Mail size={18} className="mr-2" /> Contact
                   </Button>
                   <Button variant="outline" className="text-sm py-2.5 px-5 bg-white">

@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionHeader, Card, Button } from '../ui/Shared';
 import { Mail, Building, Linkedin, Github, MessageSquare } from 'lucide-react';
+import { mailtoResearcher, RESEARCHER_EMAIL } from '../../data/contact';
+
 export const Contact = () => {
   return (
     <section
@@ -23,7 +25,8 @@ export const Contact = () => {
             {
               icon: Mail,
               label: 'Email',
-              value: 'Researcher Email',
+              value: RESEARCHER_EMAIL,
+              href: mailtoResearcher,
               color: 'text-peach-deep',
               bg: 'bg-peach-light'
             },
@@ -48,30 +51,37 @@ export const Contact = () => {
               color: 'text-lavender-mid',
               bg: 'bg-lavender-light'
             }].
-            map((item, i) =>
-            <Card
-              key={i}
-              className="text-center p-8 flex flex-col items-center justify-center group hover:border-transparent">
-              
+            map((item, i) => {
+            const card = (
+              <Card
+                className={`text-center p-8 flex flex-col items-center justify-center group hover:border-transparent ${item.href ? 'cursor-pointer' : ''}`}>
                 <motion.div
-                whileHover={{
-                  scale: 1.1,
-                  rotate: 10
-                }}
-                className={`w-14 h-14 ${item.bg} rounded-2xl flex items-center justify-center ${item.color} mb-4 shadow-sm group-hover:shadow-md transition-all`}>
-                
+                  whileHover={{
+                    scale: 1.1,
+                    rotate: 10
+                  }}
+                  className={`w-14 h-14 ${item.bg} rounded-2xl flex items-center justify-center ${item.color} mb-4 shadow-sm group-hover:shadow-md transition-all`}>
                   <item.icon size={24} />
                 </motion.div>
                 <p className="text-xs text-charcoal/50 mb-2 font-bold uppercase tracking-wider">
                   {item.label}
                 </p>
-                <p className="text-sm font-bold text-charcoal">{item.value}</p>
+                <p className="text-sm font-bold text-charcoal break-all">{item.value}</p>
               </Card>
-            )}
+            );
+
+            return item.href ? (
+              <a key={i} href={item.href} className="block no-underline text-inherit">
+                {card}
+              </a>
+            ) : (
+              <div key={i}>{card}</div>
+            );
+            })}
           </div>
 
           <div className="flex flex-wrap justify-center gap-5">
-            <Button variant="primary" className="shadow-lg px-8 py-4 text-lg">
+            <Button href={mailtoResearcher} variant="primary" className="shadow-lg px-8 py-4 text-lg">
               <MessageSquare className="w-6 h-6 mr-3" /> Contact Researcher
             </Button>
             <Button
