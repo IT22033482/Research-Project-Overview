@@ -19,20 +19,22 @@ const supervisors = [
     department: 'Department of Information Technology',
     faculty: 'Faculty of Computing',
     image: profileImages.supervisor,
+    profileUrl: 'https://www.sliit.lk/academic/academic-staff/ishara.g',
     border: 'border-mint-light',
-    accent: 'text-mint-mid',
+    accent: 'text-[#1F6B45]',
     contribution:
       'Provided research supervision, academic guidance, feedback, and direction throughout the development and evaluation of the AR museum learning component.'
   },
   {
-    name: 'Mr. Nushkan Nizme',
+    name: 'Mr. Nushkan Nisme',
     role: 'Co-Supervisor',
     title: 'Assistant Lecturer',
     department: 'Department of Information Technology',
     faculty: 'Faculty of Computing',
     image: profileImages.coSupervisor,
+    profileUrl: 'https://www.sliit.lk/academic/academic-staff/nushkan.n',
     border: 'border-sky-light',
-    accent: 'text-sky-mid',
+    accent: 'text-[#15608A]',
     contribution:
       'Provided co-supervision, technical and research feedback, and support during the development, testing, and evaluation stages.'
   }
@@ -47,7 +49,13 @@ export const Profiles = () => {
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="grid md:grid-cols-2 gap-8">
             {supervisors.map((person) =>
-            <Card key={person.name} className="bg-white h-full">
+            <a
+              key={person.name}
+              href={person.profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block no-underline text-inherit group">
+              <Card className="bg-white h-full cursor-pointer transition-shadow group-hover:shadow-soft group-hover:border-peach-light/60">
                 <div className="flex items-start gap-5 mb-5">
                   <div className={`w-24 h-24 rounded-full overflow-hidden shrink-0 shadow-sm border-2 ${person.border} ring-2 ring-white bg-cream`}>
                     <img
@@ -58,7 +66,7 @@ export const Profiles = () => {
                       className="w-full h-full object-cover object-[center_20%]" />
                   </div>
                   <div className="min-w-0 pt-1">
-                    <h4 className="font-heading font-bold text-xl text-charcoal leading-tight mb-1">
+                    <h4 className="font-heading font-bold text-xl text-charcoal leading-tight mb-1 group-hover:text-peach-deep transition-colors">
                       {person.name}
                     </h4>
                     <p className={`text-sm font-bold ${person.accent} mb-2`}>
@@ -76,6 +84,7 @@ export const Profiles = () => {
                   <strong>Contribution:</strong> {person.contribution}
                 </p>
               </Card>
+            </a>
             )}
           </div>
 
