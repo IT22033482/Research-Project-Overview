@@ -2,7 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionHeader, Card, Button } from '../ui/Shared';
 import { Mail, Building, Linkedin, Github, MessageSquare } from 'lucide-react';
-import { mailtoResearcher, RESEARCHER_EMAIL } from '../../data/contact';
+import {
+  mailtoResearcher,
+  RESEARCHER_EMAIL,
+  LINKEDIN_PROFILE_URL
+} from '../../data/contact';
 
 export const Contact = () => {
   return (
@@ -40,7 +44,9 @@ export const Contact = () => {
             {
               icon: Linkedin,
               label: 'LinkedIn',
-              value: 'Profile Link',
+              value: 'ruwani-pradeepa',
+              href: LINKEDIN_PROFILE_URL,
+              external: true,
               color: 'text-sky-mid',
               bg: 'bg-sky-light'
             },
@@ -71,7 +77,13 @@ export const Contact = () => {
             );
 
             return item.href ? (
-              <a key={i} href={item.href} className="block no-underline text-inherit">
+              <a
+                key={i}
+                href={item.href}
+                className="block no-underline text-inherit"
+                {...(item.external
+                  ? { target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}>
                 {card}
               </a>
             ) : (
