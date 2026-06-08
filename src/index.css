@@ -1,0 +1,63 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFF9F2;
+  color: #3A3A4A;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: #FFD5B5;
+  color: #3A3A4A;
+}
+
+:focus-visible {
+  outline: 2px solid #FF8D00;
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF9F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD5B5;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF9F6B;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+.container {
+  max-width: 1280px;
+}
+
+@layer utilities {
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+}
