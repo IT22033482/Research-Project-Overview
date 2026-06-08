@@ -1,11 +1,12 @@
 import React from 'react';
 import { SectionHeader, Card, Button } from '../ui/Shared';
 import { Briefcase, Mail, FileText } from 'lucide-react';
+import { publicAsset } from '../../utils/publicAsset';
 
 const profileImages = {
-  researcher: '/profiles/pradeepa-wdr.jpg',
-  supervisor: '/profiles/mr-aruna-ishara-gamage.jpeg',
-  coSupervisor: '/profiles/mr-nushkan-nizme.jpeg'
+  researcher: publicAsset('/profiles/pradeepa-wdr.jpg'),
+  supervisor: publicAsset('/profiles/mr-aruna-ishara-gamage.jpeg'),
+  coSupervisor: publicAsset('/profiles/mr-nushkan-nizme.jpeg')
 } as const;
 
 const supervisors = [
