@@ -1,2 +1,0 @@
-public/documents/*.mp4 filter=lfs diff=lfs merge=lfs -text
-Documents/*.mp4 filter=lfs diff=lfs merge=lfs -text
