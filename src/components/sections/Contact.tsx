@@ -57,7 +57,7 @@ export const Contact = () => {
             {
               icon: Github,
               label: 'GitHub',
-              value: 'Research-Project-Overview',
+              value: 'Interactive-AR-Exploration',
               href: GITHUB_REPO_URL,
               external: true,
               color: 'text-lavender-mid',

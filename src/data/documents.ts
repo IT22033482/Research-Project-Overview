@@ -1,7 +1,7 @@
 import { publicAsset } from '../utils/publicAsset';
 
 export const GITHUB_REPO_URL =
-  'https://github.com/IT22033482/Research-Project-Overview';
+  'https://github.com/IT22033482/Interactive-AR-Exploration-of-Earth-s-Geological-History';
 
 export const DEMO_VIDEO_URL =
   'https://mysliit-my.sharepoint.com/:v:/g/personal/it22033482_my_sliit_lk/IQCw7G9YaE_uTY6YSs0uYBmFATwrp3BR_pAM8EC432da_5U?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=9vRj9t';
