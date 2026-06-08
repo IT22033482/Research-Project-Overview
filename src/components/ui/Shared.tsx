@@ -6,13 +6,17 @@ export const Button = ({
   variant = 'primary',
   className = '',
   onClick,
-  href
+  href,
+  target,
+  rel
 }: {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'outline';
   className?: string;
   onClick?: () => void;
   href?: string;
+  target?: string;
+  rel?: string;
 }) => {
   const baseStyle =
     'inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0';
@@ -27,7 +31,12 @@ export const Button = ({
 
   if (href) {
     return (
-      <a href={href} className={combinedClassName} onClick={onClick}>
+      <a
+        href={href}
+        className={combinedClassName}
+        onClick={onClick}
+        target={target}
+        rel={rel}>
         {children}
       </a>);
   }
