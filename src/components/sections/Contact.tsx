@@ -8,6 +8,7 @@ import {
   LINKEDIN_PROFILE_URL,
   SLIIT_WEBSITE_URL
 } from '../../data/contact';
+import { GITHUB_REPO_URL, PROJECT_SUMMARY_URL } from '../../data/documents';
 
 export const Contact = () => {
   return (
@@ -56,7 +57,9 @@ export const Contact = () => {
             {
               icon: Github,
               label: 'GitHub',
-              value: 'Repository Link',
+              value: 'Research-Project-Overview',
+              href: GITHUB_REPO_URL,
+              external: true,
               color: 'text-lavender-mid',
               bg: 'bg-lavender-light'
             }].
@@ -100,9 +103,12 @@ export const Contact = () => {
               <MessageSquare className="w-6 h-6 mr-3" /> Contact Researcher
             </Button>
             <Button
+              href={PROJECT_SUMMARY_URL}
+              download="IT22033482_Research_Abstract.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               variant="secondary"
               className="bg-white border border-peach-light px-8 py-4 text-lg">
-              
               Download Project Summary
             </Button>
           </div>

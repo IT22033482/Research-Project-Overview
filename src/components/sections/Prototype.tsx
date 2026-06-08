@@ -8,6 +8,7 @@ import {
   ChevronRight } from
 'lucide-react';
 import { prototypeScreens } from '../../data/appUiImages';
+import { DEMO_VIDEO_URL, TECH_SUMMARY_URL } from '../../data/documents';
 
 const screens = [...prototypeScreens];
 
@@ -106,10 +107,19 @@ export const Prototype = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Button variant="primary" className="w-full shadow-md">
+              <Button
+                href={DEMO_VIDEO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="primary"
+                className="w-full shadow-md">
                 <PlayCircle className="w-5 h-5 mr-2" /> Watch Demo Video
               </Button>
               <Button
+                href={TECH_SUMMARY_URL}
+                download="Technical Documentation.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 variant="outline"
                 className="w-full border-sky-mid text-sky-mid hover:bg-sky-light">
                 <FileCode2 className="w-5 h-5 mr-2" /> View Tech Summary
