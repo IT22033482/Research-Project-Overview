@@ -6,6 +6,7 @@ const phases = [
   title: 'Near-Term Improvements',
   icon: Flag,
   color: 'text-peach-mid',
+  bulletColor: 'bg-peach-mid',
   items: [
   'Improve AR scene compatibility',
   'Improve Color-to-AR accuracy',
@@ -18,6 +19,7 @@ const phases = [
   title: 'Mid-Term Improvements',
   icon: Rocket,
   color: 'text-blush-mid',
+  bulletColor: 'bg-blush-mid',
   items: [
   'Add Sinhala, Tamil, and English narration',
   'Add stronger analytics dashboard',
@@ -29,6 +31,7 @@ const phases = [
   title: 'Long-Term Vision',
   icon: Globe,
   color: 'text-lavender-mid',
+  bulletColor: 'bg-lavender-mid',
   items: [
   'Deploy in real museum environments',
   'Expand to other museum galleries',
@@ -104,7 +107,7 @@ export const Roadmap = () => {
                 className="flex items-start text-charcoal/80 text-sm font-medium">
                 
                     <span
-                  className={`mr-3 mt-1.5 w-2 h-2 rounded-full shrink-0 ${phase.color.replace('text-', 'bg-')}`}>
+                  className={`mr-3 mt-1.5 w-2 h-2 rounded-full shrink-0 ${phase.bulletColor}`}>
                 </span>
                     {item}
                   </li>
