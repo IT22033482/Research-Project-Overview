@@ -8,7 +8,8 @@ export const Button = ({
   onClick,
   href,
   target,
-  rel
+  rel,
+  download
 }: {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'outline';
@@ -17,6 +18,7 @@ export const Button = ({
   href?: string;
   target?: string;
   rel?: string;
+  download?: string | boolean;
 }) => {
   const baseStyle =
     'inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0';
@@ -36,7 +38,8 @@ export const Button = ({
         className={combinedClassName}
         onClick={onClick}
         target={target}
-        rel={rel}>
+        rel={rel}
+        download={download}>
         {children}
       </a>);
   }

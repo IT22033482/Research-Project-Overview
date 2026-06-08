@@ -3,6 +3,7 @@ import { SectionHeader, Card, Button } from '../ui/Shared';
 import { Briefcase, Mail, FileText } from 'lucide-react';
 import { publicAsset } from '../../utils/publicAsset';
 import { BEHANCE_PROFILE_URL, mailtoResearcher } from '../../data/contact';
+import { CV_RESUME_URL } from '../../data/documents';
 
 const profileImages = {
   researcher: publicAsset('/profiles/pradeepa-wdr.jpg'),
@@ -121,7 +122,13 @@ export const Profiles = () => {
                   <Button href={mailtoResearcher} variant="secondary" className="text-sm py-2.5 px-5 bg-white border border-peach-light">
                     <Mail size={18} className="mr-2" /> Contact
                   </Button>
-                  <Button variant="outline" className="text-sm py-2.5 px-5 bg-white">
+                  <Button
+                    href={CV_RESUME_URL}
+                    download="Ruwani Pradeepa- CV Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="outline"
+                    className="text-sm py-2.5 px-5 bg-white">
                     <FileText size={18} className="mr-2" /> Download CV
                   </Button>
                 </div>
